@@ -18,13 +18,13 @@ public class Student {
     private int studentId;
 
     @NotBlank(message = "{validation.firstName.not.Blank}")
-    @Pattern(regexp = "[A-Za-z]+")
+    @Pattern(regexp = "^[A-Z][a-z]*$")
     @Size(min = 2, max = 50, message = "{validation.name.Size}")
     private String firstName;
 
     @NotBlank(message = "{validation.firstName.not.Blank}")
     @Size(min = 2, max = 50, message = "{validation.name.Size}")
-    @Pattern(regexp = "[A-Za-z]+")
+    @Pattern(regexp = "^[A-Z][a-z]*$")
     private String lastName;
 
     @Max(value = 25,message = "{validation.age.Maximum}" )
